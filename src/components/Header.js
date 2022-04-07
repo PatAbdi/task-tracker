@@ -7,7 +7,10 @@ const Header = ({title, onAdd, showAdd}) => {
         <div  className='container'>
         <header className='heading'>
             <h1>{title}</h1>
-            <Button color='green' text={showAdd ? 'close' : 'Add'} onclick={onAdd}/>
+            <Button 
+            color= {showAdd ? 'red' : 'green'} 
+            text={showAdd ? 'close' : 'Add'} 
+            onclick={onAdd}/>
         </header>
         {/* <Tasks/> */}
         </div>

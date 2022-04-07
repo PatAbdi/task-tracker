@@ -17,7 +17,7 @@ const App = () => {
     
     {
         id: 2,
-        text: 'Babes Day',
+        text: 'Yae Miko Day',
         day: 'Mar 5th 2021 17:00PM',
         reminder: true,
     },

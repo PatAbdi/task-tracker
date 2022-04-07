@@ -46,8 +46,8 @@ const AddTasks = ({onAdd}) => {
 
             </div>
 
-            <div className="form-control">
-                <label>Reminder</label>
+            <div className="form-control form_checkbox">
+                <label>Set Reminder</label>
                 <input type='checkbox'
                 checked={remind}
                 value={remind} 
@@ -58,7 +58,7 @@ const AddTasks = ({onAdd}) => {
 
             </div>
                 
-            <input type='submit' value= "Save Task"/>
+            <input type='submit' value= "Save Task" className='save_btn' />
             
         </form>
     )
