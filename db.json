@@ -18,6 +18,13 @@
       "remind": true,
       "id": 3,
       "reminder": false
+    },
+    {
+      "text": "Yanfei's Day",
+      "day": "12th May 21:00 hrs",
+      "remind": true,
+      "id": 4,
+      "reminder": false
     }
   ]
 }

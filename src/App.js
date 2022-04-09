@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
-// import {BrowserRouter as router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Header from "./components/Header";
-import Foots from "./components/Foots";
-// import About from "./components/About";
+import Footer from "./components/Footer";
+import About from "./components/About";
 import Tasks from "./components/Tasks";
 import AddTasks from "./components/AddTasks";
 
@@ -113,37 +113,32 @@ await fetch(`http://localhost:5000/taskslists/${id}`,
 setlists(lists.filter((lists)=> lists.id !== id))
 }
   return (
-    // <Router>
-
-    
+    <Router>
     <div className="App">
       <Header onAdd= {() =>setshowAddTask(!showAddTask) 
         }
         showAdd ={showAddTask}/>
-        
-      {showAddTask && <AddTasks 
-
-      onAdd={addTasking} />}
-      {lists.length> 0 ?
-
-      <Tasks listsname={lists} 
-
-      onDelete={deletetask} 
-
-      onToggle={toggleReminder}
-      /> 
-
-      : 'No tasks Available'}
-    
-    {/* <Route path='/' exact render={(props) =>
-    (
-      <>
       
+    <Routes>
+    <Route path='/' element= {
+      <>
+{showAddTask && <AddTasks onAdd={addTasking} />}
+
+{lists.length> 0 ?(
+<Tasks listsname={lists} 
+onDelete={deletetask} 
+onToggle={toggleReminder}/>) 
+: ('No tasks Available')}
       </>
-    )}/> */}
-    {/* <Route path='/about' component={About} /> */}
-    <Foots/>
+    }
+    />
+      
+ 
+    <Route path="/about" element = {<About/>} />
+    </Routes>
+    <Footer/>
     </div>
+    </Router>
 
   )
   

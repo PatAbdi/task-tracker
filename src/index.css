@@ -143,6 +143,15 @@ code {
 
 }
 
+.aboutbox
+{
+  
+  text-align: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+
 footer
 {
   text-align: center;
